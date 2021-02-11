@@ -1,0 +1,234 @@
+body{
+    background-color: #F5F5DC;
+    color: #2E0000;
+    font-family: Verdana, Arial, sans-serif;
+    background-image: url(../Pictures/background.gif);
+}
+
+#wrapper {
+    width: 80%;
+    max-width: 2048px;
+    min-width: 960px;
+    margin-left: auto;
+    margin-right: auto;
+    background-color: #F5F5DC;
+    box-shadow: 3px 3px 3px #2E0000;
+}
+
+nav{
+    text-align: center;
+    background-color: #E6D6A9;
+    padding: 10px;
+    font-weight: bold;
+}
+
+nav a{
+    text-decoration: none;
+}
+
+h1, h2{
+    font-family: 'Times New Roman', Georgia, serif;
+}
+
+h1{
+    height: 100px;
+    margin: 0px;
+    background-image: url(../Pictures/javalogo.gif);
+    background-repeat: no-repeat;
+    background-position: center;
+    text-indent: -9999px;
+}
+
+h3
+{
+	background-color: #E6D6A9;
+	text-transform: uppercase;
+}
+
+dt{
+    font-weight: bold;
+}
+
+nav ul{
+    margin-top: -10;
+}
+
+header{
+    background-color: #D2B48C;
+}
+
+footer 
+{
+	background-color: #D2B48C;
+    color: 000000;
+    font-size: .60em;
+    font-style: italic;
+    text-align: center;
+    padding: 10px;
+}
+
+main{
+    padding: 20px;
+    display: block;
+}
+
+#hero{
+    height: 300px;
+    background-image: url(../Pictures/heroroad.jpg);
+    color: #f5f5dc;
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+}
+
+#news{
+    margin-right: 20%;
+    margin-left: 20%;
+}
+
+.parent:hover > ul{
+    display: block;
+    position: absolute;
+    background-color: #cdaa65;
+    list-style: none;
+    margin: 0%;
+}
+
+.child li {background-color: #F5F5DC;
+    line-height: 30px;
+    border-bottom:#400d08 2px solid;
+    border-right:#400d08 2px solid;
+    border-top: #400d08 2px solid;
+    border-left:  #400d08 2px solid;;
+    margin-left: -40;
+}
+
+
+.parent{
+    margin-top: 10px;
+    margin-bottom: 0;
+    display: inline-block;
+    list-style: none;
+    /* position: relative; */
+    /* float: left; */
+    line-height: 30px
+}
+
+.parent > :first-child{
+    padding-left: 30;
+    color: grey;
+}
+
+.parent > :first-child:hover{
+    color: #2e0000;
+}
+
+.child{
+    display: none;
+    margin: 0;
+}
+
+table{
+    width:80%;
+    margin-right: auto;
+    margin-left: auto;
+    border:2px solid #E6D6A9;
+}
+
+td, th{
+    text-align: center;
+    border:1px solid #E6D6A9;
+
+}
+
+
+#gallery { position: relative;
+    width: 60%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 10px;
+ }
+#gallery ul { width: 250px; 
+             list-style-type: none; }
+#gallery li { display: inline; 
+              float: left; 
+			  padding: 10px; }
+#gallery img { border-style: none; }
+#gallery a { text-decoration: none; 
+             color: #333; 
+			 font-style: italic; }
+#gallery span { display: none; }    
+#gallery a:hover span { display: block; 
+                        position: absolute;
+					    top: 10px; 
+						left: 300px; 
+                        text-align: center; 
+                    }
+                        
+/* CSS for IPAD */
+@media only screen 
+  and (min-device-width: 768px) 
+  and (max-device-width: 1024px) 
+  and (orientation: portrait) 
+  and (-webkit-min-device-pixel-ratio: 1) {
+      nav{
+          display: block;
+          float: none;
+       }
+
+       .parent{
+           display: block;
+       }
+
+       main{
+           width: 80%;
+           margin-left: auto;
+           margin-right: auto;
+       }
+
+       #hero{
+        background-image: url(../Pictures/photo4.jpg);
+
+       }
+
+        h1{
+            height: 100px;
+            margin: 0px;
+            background-image: none;
+            text-indent:1;
+        }
+      
+}
+
+/* Css for phones */
+@media only screen 
+  and (min-device-width: 360px) 
+  and (max-device-width: 640px) 
+  and (orientation: portrait) 
+  and (-webkit-min-device-pixel-ratio: 1){
+    nav{
+        display: block;
+        float: none;
+     }
+
+     .parent{
+         display: block;
+     }
+
+     main{
+         width: 80%;
+         margin-left: auto;
+         margin-right: auto;
+     }
+
+     #hero{
+      background-image: url(../Pictures/photo3.jpg);
+
+     }
+
+      h1{
+          height: 100px;
+          margin: 0px;
+          background-image: none;
+          text-indent:1;
+      }
+  }

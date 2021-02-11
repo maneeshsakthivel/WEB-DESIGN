@@ -1,0 +1,115 @@
+body{
+    background-image: url("background.jpg");
+    background-size: cover;
+}
+.navbar{
+    width: 70%;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+footer a{
+    color: black;
+}
+
+nav a{
+    width: 60%;
+    height: 30px;
+    font-family: cursive;
+    margin: 50px;
+    color: black;
+    font-size: x-large;
+}
+
+.logo{
+    text-align: center;
+    color: rgb(232, 221, 161);
+}
+
+footer{
+    clear: both;
+    width: 70%;
+    margin-left: auto;
+    margin-right: auto;
+    font-size: x-large;   
+    background-color: cornsilk;
+    margin-bottom: 20px;
+    margin-top: 10px;
+}
+
+
+.navbar{
+    background-color: cornsilk;
+    height: 50px;
+}
+
+.content{
+    width: 70%;
+    margin-right: auto;
+    margin-left: auto;
+    margin-top: 20px;
+}
+
+.content img{
+    width: 30%;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+.center{
+    width: 30%;
+    margin-right: auto;
+    margin-left: auto;
+    display: block;
+}
+
+img{
+    border: 5px solid whitesmoke;
+}
+
+body{
+    height: 300;
+}
+
+#container {
+    width: 70%;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+.gallery{
+    float: left;
+    margin: 20px;
+    padding: 20px;
+    width:  150px;
+    border: 1px solid red;
+}
+
+.gallery:hover{
+    cursor: pointer;
+    box-shadow: 10px -10px grey;
+    border-radius: 25px;
+    border: 1px solid green;
+}
+
+.gallery img {
+    width: 150px;
+    height: 150px;
+    display: flex;
+}
+
+.description{
+    text-align: center;
+}
+
+.gallery a:visited{
+    color: red;
+}
+
+.gallery a:hover{
+    color: greendddddddddd;
+}
+
+.homeimage{
+    width: 200;
+}

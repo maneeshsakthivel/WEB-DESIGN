@@ -1,0 +1,71 @@
+<html>
+    <head>
+        <link rel="stylesheet" href="javajam.css">
+        <title>
+            Java Jam Coffe House Menu
+        </title>
+    </head>
+
+    <body>
+        <div id="wrapper">
+            <header>
+                <h1>JavaJam Coffee House</h1>
+            </header>
+            <nav>
+                <ul>
+                    <li class="parent">
+                        <a href="home.html">Home</a> &nbsp;&nbsp;
+                        <ul class="child">
+                            <li><a href="">Hot Brews</a></li>
+                            <li><a href="">Cold Brews</a></li>
+                        </ul>
+                    </li>
+                    <li class="parent">
+                        <a href="menu.html">Menu</a> &nbsp;&nbsp;
+                    </li>
+                    <li class="parent">
+                        <a href="music.html">Music</a> &nbsp;&nbsp;
+                    </li>
+                    <li class="parent">
+                        <a href="jobs.html">Jobs</a> &nbsp;&nbsp;
+                    </li>
+                    <li class="parent">
+                        <a href="gallery.html">Gallery</a> &nbsp;&nbsp;
+                    </li>
+                </ul>
+              </nav>
+    
+            <main>
+                <form action="" id='jobform'>
+                    First name: <input type="text"  name="fname"><br><br>
+                    Last name: <input type="text"  name="lname" required><br><br>
+                    Email: <input type="text" name="email" required><br><br>
+                    Country: <select name="country">
+                        <option value="India">India</option>
+                        <option value="USA">United States</option>
+                        <option value="china">China</option>
+                        <option value="UK">United Kingdom</option>
+                    </select><br><br>
+                    City: <input type="text"  name="city"><br><br>
+                    Address: <input type="text"  name="address"><br><br>
+                    Desired position: <select name="position">
+                        <option value="dev">Software Developer</option>
+                        <option value="pm">Product Manger</option>
+                        <option value="tl">Tech Lead</option>
+                    </select><br><br>
+                    Additional information: <textarea rows="4" cols="50" name="comment" form="jobform"> Enter text here...</textarea>
+                        <br><br>
+                        Resume: <input type="file" id="myFile" name="filename" required><br><br> 
+                    <input type="submit" value="Apply now!">
+                  </form>
+
+            </main>
+            
+            <footer style="clear: left;">
+                        Copyright © 2016 JavaJam Coffee House<br>
+                        <a href="mailto:maneesh.f@northeastern.edu">maneesh.f@northeastern.edu</a>	
+            </footer>
+        </div>
+
+    </body>
+</html>

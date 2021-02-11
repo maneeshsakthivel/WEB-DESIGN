@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Image Gallery</title>
+
+        <style>
+            header {
+                text-align: center;
+
+            }
+
+            #container {
+                width: 80%;
+                margin-right: auto;
+                margin-left: auto;
+            }
+
+            .gallery{
+                float: left;
+                margin: 20px;
+                padding: 20px;
+                width:  150px;
+                border: 1px solid red;
+            }
+
+            .gallery:hover{
+                cursor: pointer;
+                box-shadow: 10px -10px grey;
+                border-radius: 25px;
+                border: 1px solid green;
+            }
+
+            .gallery img {
+                width: 150px;
+                height: 150px;
+                display: flex;
+            }
+
+            .description{
+                text-align: center;
+            }
+
+            a:visited{
+                color: red;
+            }
+
+            a:hover{
+                color: greendddddddddd;
+            }
+        </style>
+
+
+    </head>
+    <body>
+        <header>
+            <h1>Image Gallery</h1>
+        </header>
+
+        <div id="container">
+
+            <div class="gallery">
+                <a href="images/image1.png" target="_blank">
+                <img src="images/image1.png" alt="image1">
+                <div class="description">Product 1</div>
+            </a>
+            </div>
+            <div class="gallery">
+                <a href="images/image2.png" target="_blank">
+                <img src="images/image2.png" alt="image1">
+                <div class="description">Product 2</div>
+            </a>
+            </div>
+            <div class="gallery">
+                <a href="images/image3.png" target="_blank">
+                <img src="images/image3.png" alt="image1">
+                <div class="description">Product 3</div>
+            </a>
+            </div>
+            <div class="gallery">
+                <a href="images/image4.png" target="_blank">
+                <img src="images/image4.png" alt="image1">
+                <div class="description">Product 4</div>
+            </a>
+            </div>
+            <div class="gallery">
+                <a href="images/image5.png" target="_blank">
+                <img src="images/image5.png" alt="image1">
+                <div class="description">Product 5</div>
+            </a>
+            </div>
+            <div class="gallery">
+                <a href="images/image6.png" target="_blank">
+                <img src="images/image6.png" alt="image1">
+                <div class="description">Product 6</div>
+            </a>
+            </div>
+            <div class="gallery">
+                <a href="images/image7.png" target="_blank">
+                <img src="images/image7.png" alt="image1">
+                <div class="description">Product 7</div>
+            </a>
+            </div>
+            <div class="gallery">
+                <a href="images/image8.png" target="_blank">
+                <img src="images/image8.png" alt="image1">
+                <div class="description">Product 8</div>
+            </a>
+            </div>
+
+        </div>
+
+    </body>
+</html>
