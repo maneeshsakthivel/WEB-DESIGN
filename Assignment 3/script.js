@@ -20,7 +20,7 @@ function disabelButton() {
 }
 
 function enableButton(){
-    submitButton.disabelButton = false;
+    submitButton.disabled = false;
     submitButton.style.backgroundColor = "Orange"
     submitButton.style.border = "thick solid Orange"
 }
@@ -93,7 +93,13 @@ function addNewStudent() {
     advisorRow.setAttribute("class", "dropDownTextArea");
     let advisorDetails = document.createElement("TD");
     advisorRow.setAttribute("colspan", "8")
-    advisorDetails.innerText = "Adivsor" + "\n " + "Award  Details";
+    advisorDetails.innerText = "Adivsor" + "\n " +
+     "Award  Details \n" +
+      "Summer 1-2014(TA) \n" + 
+      "Budget Number: \n" + 
+      "Tuition Number: \n" + 
+      "Comments: \n" + 
+      "Award Status:";
     advisorRow.appendChild(advisorDetails);
     table.appendChild(advisorRow);
 }
