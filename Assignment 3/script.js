@@ -89,17 +89,18 @@ function addNewStudent() {
     }
     table.appendChild(row);
 
+    //Adding dropdown row
     let advisorRow = document.createElement('TR');
     advisorRow.setAttribute("class", "dropDownTextArea");
     let advisorDetails = document.createElement("TD");
     advisorRow.setAttribute("colspan", "8")
-    advisorDetails.innerText = "Adivsor" + "\n " +
+    advisorDetails.innerText = "Adivsor" + "\n\n " +
      "Award  Details \n" +
       "Summer 1-2014(TA) \n" + 
       "Budget Number: \n" + 
       "Tuition Number: \n" + 
-      "Comments: \n" + 
-      "Award Status:";
+      "Comments: \n\n\n" + 
+      "Award Status:\n\n";
     advisorRow.appendChild(advisorDetails);
     table.appendChild(advisorRow);
 }
