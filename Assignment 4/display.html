@@ -29,26 +29,31 @@
 
                 var queryParams = window.location.search;
                 const urlParams = new URLSearchParams(queryParams);
+                var traversedkeys = new Array();
 
                 urlParams.forEach(function(value, key) {
                     if (value != ""){
-                        urlParams.getAll(key);
-                        var table = document.getElementById("table");
-                        let row = document.createElement('TR');
-                        let keyCell = document.createElement('Cell');
+                        if (!traversedkeys.includes(key)){
+                            traversedkeys.push(key);
+                            urlParams.getAll(key);
+                            var table = document.getElementById("table");
+                            let row = document.createElement('TR');
+                            let keyCell = document.createElement('Cell');
 
-                        let keyCol = document.createElement('TD');
-                        let valCell = document.createElement('Cell');
-                        let valCol = document.createElement('TD');
+                            let keyCol = document.createElement('TD');
+                            let valCell = document.createElement('Cell');
+                            let valCol = document.createElement('TD');
 
-                        keyCell.innerHTML = key;
-                        valCell.innerHTML  =  urlParams.getAll(key);
+                            keyCell.innerHTML = key;
+                            valCell.innerHTML  =  urlParams.getAll(key);
 
-                        keyCol.appendChild(keyCell);
-                        valCol.appendChild(valCell)
-                        row.appendChild(keyCol);
-                        row.appendChild(valCol);
-                        table.firstElementChild.appendChild(row)
+                            keyCol.appendChild(keyCell);
+                            valCol.appendChild(valCell)
+                            row.appendChild(keyCol);
+                            row.appendChild(valCol);
+                            table.firstElementChild.appendChild(row)
+                        }
+                        
                     }
                     
                 });

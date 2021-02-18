@@ -129,7 +129,7 @@ function drinkslistChange(obj){
                     textFeild.required = true;
                     textFeild.className = "dynamicTextFeild";
                     textFeild.id = "dynamicTF";
-                    textFeild.name = "dynamicTF";
+                    textFeild.name = "Value of beverage";
                     textFeild.setAttribute("type", "text");
                     
                     formDiv.appendChild(labelTf);
