@@ -115,6 +115,7 @@ function drinkslistChange(obj){
                     for (obj of removeTextFields){
                         obj.style.display = "block";
                     }
+                    
                 }
                 else{
                     var labelTf = document.createElement("label")
@@ -122,8 +123,10 @@ function drinkslistChange(obj){
                     labelTf.className = "dynamicTextFeild";
                     labelTf.setAttribute("for", "dynamicTF");
 
+
                     var formDiv = document.getElementById("form_elements");
                     var textFeild = document.createElement("input");
+                    textFeild.required = true;
                     textFeild.className = "dynamicTextFeild";
                     textFeild.id = "dynamicTF";
                     textFeild.name = "dynamicTF";
@@ -139,6 +142,8 @@ function drinkslistChange(obj){
                 for (obj of removeTextFields){
                     obj.style.display = "none";
                 }
+                var dynamicTextF = document.getElementById("dynamicTF");
+                dynamicTextF.required = false;
             }
         });
         chkbox.style.float = "left";
