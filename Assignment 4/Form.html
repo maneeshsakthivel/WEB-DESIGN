@@ -25,64 +25,80 @@
 	 <h3>Love something? Hate something? Let us know!</h3>
 		 Note : Fields marked with an asterisk(*) are mandatory
 		 <br><br>
-		 <form method="post onsubmit="return finalCheck()">
-			<label>Title*:</label>
-			<input type="radio" name="title" id="miss" value="miss" required="required"/>Miss
-			<input type="radio" name="title" id="mr" value="mr" required="required"/>Mr.
-			<input type="radio" name="title" id="mrs" value="mrs" required="required"/>Mrs.
-			<br><br>
-			<label for="firstName">First Name*:</label>
-			<input type="text" name="firstName" required="required" id="firstName" placeholder="First Name", required="true" onblur="validateFields(this,'errorFirstName', 'name')"/>
-			<br>
-			<div id="errorFirstName" class="errorDiv">
-				Please enter a valid first name. Only alphabets allowed.
+		 <form method="get" action="display.html" onsubmit="return finalCheck()" >
+			 <div id="form_elements">
+				<label>Title*:</label>
+				<input type="radio" name="title" id="miss" value="miss" required="required"/>Miss
+				<input type="radio" name="title" id="mr" value="mr" required="required"/>Mr.
+				<input type="radio" name="title" id="mrs" value="mrs" required="required"/>Mrs.
+				<br><br>
+				<label for="firstName">First Name*:</label>
+				<input type="text" name="firstName" required="required" id="firstName" placeholder="First Name", required="true" onblur="validateFields(this,'errorFirstName', 'name')"/>
+				<br>
+				<div id="errorFirstName" class="errorDiv">
+					Please enter a valid first name. Only alphabets allowed.
+				</div>
+				
+				<br>
+				
+				<label for="lastName">Last Name*:</label>
+				<input type="text" name="lastName" required="required" id="lastName" placeholder="Last Name" onblur="validateFields(this,'errorLastName', 'name')"/>
+				<br>
+				<div id="errorLastName" class="errorDiv">
+					Please enter a valid last name. Only alphabets allowed.
+				</div>
+				<br>
+				
+				<label for="emailId">Email Id*:</label>
+				<input type="text" name="emailId" id="emailId" required="required" placeholder="yourname@domain.com" onblur="validateFields(this,'errorEmailId', 'email')"/>
+				<br>
+				<div id="errorEmailId" class="errorDiv">
+					Please enter a valid Email ID.
+				</div>
+				<br>
+				
+	
+				<label for="phoneNumber">Phone Number*:</label>
+				<input type="text" name="phoneNumber" id="phoneNumber" required="required" placeholder="xxx-xxx-xxxx" onblur="validateFields(this,'errorPhone', 'phone')" maxlength="12"/>
+				<br>
+				<div id="errorPhone" class="errorDiv">
+					Please enter a valid Phone Number.
+				</div>
+				<br>
+				
+				<label for="zipcode">ZipCode*:</label>
+				<input type="text" name="zipcode" id="zipcode" required="required" placeholder="xxxxxx" onblur="validateFields(this,'errorZipCode', 'zipcode')" />
+				<br>
+				<div id="errorZipCode" class="errorDiv">
+					Please enter a valid zip code.
+				</div>
+				<br>
+				 
+				<label for="source">How did you hear*:</label>
+				<input type='checkbox' class="howHear"  onclick="isChecked();" name="source" value="facebook" /> Facebook
+				<input type='checkbox' class="howHear"  onclick="isChecked();" name="source" value="google" /> Google
+				<input type='checkbox' class="howHear"  onclick="isChecked();" name="source" value="yelp" /> Yelp 
+				<br>
+				<div id="errorSource" class="errorDiv">
+					Please select atleast one option.
+				</div>
+				<br> 
+				 
+				<label for="comments">Comments*:</label>
+				<textarea name="text" required="required" id="comments" placeholder="Your comments" rows="5" cols="25"></textarea>
+				<br><br>
+	
+				<label for="drinks">Choice of Beverage *:</label>
+				<select onchange="drinkslistChange(this)" name="drinks" id="drinks" required>
+					<option value="black tea">Black Tea</option>
+					<option value="coffee">Coffee</option>
+					<option value="ice coffe">Ice coffee</option>
+					<option value="ice tea">Ice tea</option>
+					<option value="expresso">Expresso</option>
+				</select>
+				<br>
+				<br>
 			</div>
-			
-			<br>
-			
-
-			<label for="lastName">Last Name*:</label>
-			<input type="text" name="lastName" required="required" id="lastName" placeholder="Last Name" onblur="validateFields(this,'errorLastName', 'name')"/>
-			<br>
-			<div id="errorLastName" class="errorDiv">
-				Please enter a valid last name. Only alphabets allowed.
-			</div>
-			<br>
-			
-			<label for="emailId">Email Id*:</label>
-			<input type="text" name="emailId" id="emailId" required="required" placeholder="yourname@domain.com" onblur="validateFields(this,'errorEmailId', 'email')"/>
-			<br>
-			<div id="errorEmailId" class="errorDiv">
-				Please enter a valid Email ID.
-			</div>
-			<br>
-			
-
-			<label for="phoneNumber">Phone Number*:</label>
-			<input type="text" name="phoneNumber" id="phoneNumber" required="required" placeholder="xxx-xxx-xxxx" onblur="validateFields(this,'errorPhone', 'phone')" maxlength="12"/>
-			<br>
-			<div id="errorPhone" class="errorDiv">
-				Please enter a valid Phone Number.
-			</div>
-			<br>
-			
-            <label for="zipcode">ZipCode*:</label>
-			<input type="text" name="zipcode" id="zipcode" required="required" placeholder="xxxxxx" onblur="validateFields(this,'errorZipCode', 'zipcode')" />
-			<br>
-			<div id="errorZipCode" class="errorDiv">
-				Please enter a valid zip code.
-			</div>
-			<br>
-             
-            <label for="zipcode">How did you hear*:</label>
-			<input type='checkbox' class="howHear"  name="source" value="facebook" /> Facebook
-            <input type='checkbox' class="howHear"  name="source" value="google" /> Google
-            <input type='checkbox' class="howHear"  name="source" value="yelp" /> Yelp 
-			<br><br> 
-             
-			<label for="comments">Comments*:</label>
-			<textarea name="text" required="required" id="comments" placeholder="Your comments" rows="5" cols="25"></textarea>
-			<br><br>
 			<input type="Submit" onclick="finalCheck()">
 			<input type="Reset">
 			<br><br>
