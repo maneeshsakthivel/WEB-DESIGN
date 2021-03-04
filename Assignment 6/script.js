@@ -36,6 +36,12 @@ $( document ).ready( function ()
         validateFields(this,'errorZipCode', 'zipcode')
     });
 
+    $( "#comments" ).blur( function ()
+    {
+        validateFields(this,'errorComments', 'comments')
+    });
+
+
     checkboxes = $(".howHear");
 
     checkboxes.each(
@@ -48,10 +54,32 @@ $( document ).ready( function ()
         }
     );
 
+    radioBoxes = $(".titleRadio");
+
+    radioBoxes.each(
+        function (index, element){
+            $(element).click(
+                function (){
+                    checkRadioBoxes();
+                }
+            )
+        }
+    );
+
+
+
+
     //Submitbutton callback
     $('.submit').click(
         function() {
+
+            //Checking radioboxes
+            var isRadioSelected = checkRadioBoxes();
+            if(!isRadioSelected){
+                return false;
+            }
             
+            //Checking checboxes
             var isChked = isChecked();
             var returnFlag;
             if (!isChked){
@@ -81,6 +109,11 @@ $( document ).ready( function ()
 
                 else if ($( "#zipcode" ).val() == ""){
                     validateFields($( "#zipcode" ).get(0),'errorZipCode', 'zipcode');
+                    return false;
+                }
+                
+                else if ($( "#comments" ).val() == ""){
+                    validateFields($( "#comments" ).get(0),'errorComments', 'comments');
                     return false;
                 }
 
@@ -171,6 +204,15 @@ function validateFields ( obj, errorDivId, type )
             clearErrorMsg( errorDiv, obj )
         }
     }
+
+    if ( type == "comments" ){
+        if(obj.value == ""){
+            showErrorMsg( errorDiv, obj );
+        }
+        else{
+            clearErrorMsg( errorDiv, obj );
+        }
+    }
 }
 
 function showErrorMsg ( divError, textField )
@@ -191,4 +233,17 @@ function clearErrorMsg(divError, textField){
     if (textField){
         textField.style.border = "";
     }
+}
+
+function checkRadioBoxes(){
+    var radioList = $(".titleRadio");
+
+    for(radio of radioList){
+        if (radio.checked){
+            clearErrorMsg($('#errorTitle').get(0), null);
+            return true;
+        }
+    }
+    showErrorMsg($('#errorTitle').get(0), null);
+    return false;
 }

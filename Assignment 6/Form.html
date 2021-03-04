@@ -54,10 +54,14 @@
 		 <br><br>
 		 <form method="get" action="display.html" onsubmit="return finalcheck()">
 			<label>Title*:</label>
-			<input type="radio" name="title" id="miss" value="miss" required="required"/>Miss
-			<input type="radio" name="title" id="mr" value="mr" required="required"/>Mr.
-			<input type="radio" name="title" id="mrs" value="mrs" required="required"/>Mrs.
-			<br><br>
+			<input type="radio" name="title" class="titleRadio" id="miss" value="miss" />Miss
+			<input type="radio" name="title" id="mr" class="titleRadio" value="mr" />Mr.
+			<input type="radio" name="title" id="mrs" class="titleRadio" value="mrs"/>Mrs.
+			<br>
+			<div id="errorTitle" class="errorDiv">
+				Please select atleast one option.
+			</div>
+			<br>
 			<label for="firstName">First Name*:</label>
 			<input type="text" name="firstName" id="firstName" placeholder="First Name" />	
 			<br>
@@ -113,10 +117,15 @@
              
 			<label for="comments">Comments*:</label>
 			<textarea name="text" id="comments" placeholder="Your comments" rows="5" cols="25" required></textarea>
-			<br><br>
-			<input type="Submit" class="submit" onclick="finalcheck()">
+			<br>
+			<div id="errorComments" class="errorDiv">
+				Please fill up the comments section.
+			</div>
+			<br>
+			<input type="Submit" class="submit" >
 			<input type="Reset">
-			<br><br>
+			<br>
+			<br>
 		 </form>
 	 </main>
  </div>
