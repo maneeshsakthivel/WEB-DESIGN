@@ -20,29 +20,6 @@
 
 <script src="https://code.jquery.com/jquery-3.5.1.js" integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc=" crossorigin="anonymous"></script>
 <script src="script.js"></script>
-<script>
-	$( document ).ready(function() {
-		console.log( "ready!" );
-		$("#firstName").blur(function(){
-			validateFields(this,'errorFirstName', 'name');
-		});
-
-
-	});
-
-	// $("document").load(
-		
-	// });
-	
-
-
-// 	$(".submit").click(function() {
-    
-//     return false;
-//  }); 
-
-
-</script>
  </head>
  <body>
  <div id="container">
@@ -52,7 +29,7 @@
 	 <h3>Love something? Hate something? Let us know!</h3>
 		 Note : Fields marked with an asterisk(*) are mandatory
 		 <br><br>
-		 <form method="get" action="display.html" onsubmit="return finalcheck()">
+		 <form method="get" action="display.html">
 			<label>Title*:</label>
 			<input type="radio" name="title" class="titleRadio" id="miss" value="miss" />Miss
 			<input type="radio" name="title" id="mr" class="titleRadio" value="mr" />Mr.
@@ -116,7 +93,7 @@
 			<br> 
              
 			<label for="comments">Comments*:</label>
-			<textarea name="text" id="comments" placeholder="Your comments" rows="5" cols="25" required></textarea>
+			<textarea name="text" id="comments" placeholder="Your comments" rows="5" cols="25"></textarea>
 			<br>
 			<div id="errorComments" class="errorDiv">
 				Please fill up the comments section.

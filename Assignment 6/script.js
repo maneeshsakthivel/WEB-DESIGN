@@ -5,7 +5,6 @@ $( document ).ready( function ()
 {
     console.log( "ready!" );
 
-
     //Validate firstName
     $( "#firstName" ).blur( function ()
     {
@@ -35,13 +34,14 @@ $( document ).ready( function ()
     {
         validateFields(this,'errorZipCode', 'zipcode')
     });
-
+    
+    //Validate comments
     $( "#comments" ).blur( function ()
     {
         validateFields(this,'errorComments', 'comments')
     });
 
-
+    //get checkboxes and all listeners
     checkboxes = $(".howHear");
 
     checkboxes.each(
@@ -53,7 +53,8 @@ $( document ).ready( function ()
             )
         }
     );
-
+    
+    //get radioboxes and all listeners
     radioBoxes = $(".titleRadio");
 
     radioBoxes.each(
@@ -91,27 +92,27 @@ $( document ).ready( function ()
                     validateFields( $( "#firstName" ).get(0), 'errorFirstName', 'name' );
                     return false;
                 }
-
+                //last name null check
                 else if ($( "#lastName" ).val() == ""){
                     validateFields($( "#lastName").get(0),'errorLastName', 'name');
                     return false;
                 }
-
+                //email id null check
                 else if ($( "#emailId" ).val() == ""){
                     validateFields($( "#emailId" ).get(0),'errorEmailId', 'email');
                     return false;
                 }
-
+                //phone number null check
                 else if ($( "#phoneNumber" ).val() == ""){
                     validateFields($( "#phoneNumber" ).get(0),'errorPhone', 'phone');
                     return false;
                 }
-
+                //zipcode null check
                 else if ($( "#zipcode" ).val() == ""){
                     validateFields($( "#zipcode" ).get(0),'errorZipCode', 'zipcode');
                     return false;
                 }
-                
+                //comments null check
                 else if ($( "#comments" ).val() == ""){
                     validateFields($( "#comments" ).get(0),'errorComments', 'comments');
                     return false;
@@ -216,7 +217,7 @@ function validateFields ( obj, errorDivId, type )
 }
 
 function showErrorMsg ( divError, textField )
-{
+{   //null checks for checkbxes and radio button
     if ( textField )
     {
         textField.style.border = "2px solid red";
@@ -230,6 +231,7 @@ function showErrorMsg ( divError, textField )
 function clearErrorMsg(divError, textField){
     divError.style.display = "none";
     divError.style.color = "red";
+    //null checks for checkbxes and radio button
     if (textField){
         textField.style.border = "";
     }
@@ -240,10 +242,12 @@ function checkRadioBoxes(){
 
     for(radio of radioList){
         if (radio.checked){
+            //Clear error if it is selected
             clearErrorMsg($('#errorTitle').get(0), null);
             return true;
         }
     }
+    //Comes here if none of it is selected
     showErrorMsg($('#errorTitle').get(0), null);
     return false;
 }
