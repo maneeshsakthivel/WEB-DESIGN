@@ -1,0 +1,129 @@
+<!doctype html>
+<html lang="en">
+ <head>
+  <title>Feedback</title>
+  <style>
+    label {	float: left;
+			width: 150px;}
+      #container{
+          width: 700px;
+          margin: auto;
+          background-color: beige;
+      } 
+      main{
+          padding: 50px;
+      }
+	  .errorDiv{
+    	display: none;
+	}
+  </style>
+
+<script src="https://code.jquery.com/jquery-3.5.1.js" integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc=" crossorigin="anonymous"></script>
+<script src="script.js"></script>
+<script>
+	$( document ).ready(function() {
+		console.log( "ready!" );
+		$("#firstName").blur(function(){
+			validateFields(this,'errorFirstName', 'name');
+		});
+
+
+	});
+
+	// $("document").load(
+		
+	// });
+	
+
+
+// 	$(".submit").click(function() {
+    
+//     return false;
+//  }); 
+
+
+</script>
+ </head>
+ <body>
+ <div id="container">
+	 
+	 <main>
+	 <h2>Feeback</h2>
+	 <h3>Love something? Hate something? Let us know!</h3>
+		 Note : Fields marked with an asterisk(*) are mandatory
+		 <br><br>
+		 <form method="get" action="display.html" onsubmit="return finalcheck()">
+			<label>Title*:</label>
+			<input type="radio" name="title" id="miss" value="miss" required="required"/>Miss
+			<input type="radio" name="title" id="mr" value="mr" required="required"/>Mr.
+			<input type="radio" name="title" id="mrs" value="mrs" required="required"/>Mrs.
+			<br><br>
+			<label for="firstName">First Name*:</label>
+			<input type="text" name="firstName" id="firstName" placeholder="First Name" />	
+			<br>
+			<div id="errorFirstName" class="errorDiv">
+				Please enter a valid first name. Only alphabets allowed.
+			</div>
+			<br>
+			
+
+			<label for="lastName">Last Name*:</label>
+			<input type="text" name="lastName" id="lastName" placeholder="Last Name" />
+			<br>
+			<div id="errorLastName" class="errorDiv">
+				Please enter a valid last name. Only alphabets allowed.
+			</div>
+			<br>
+			
+
+			<label for="emailId">Email Id*:</label>
+			<input type="text" name="emailId" id="emailId" placeholder="yourname@domain.com" />
+			<br>
+			<div id="errorEmailId" class="errorDiv">
+				Please enter a valid Email ID.
+			</div>
+			<br>
+			
+
+			<label for="phoneNumber">Phone Number*:</label>
+			<input type="text" name="phoneNumber" id="phoneNumber" placeholder="xxx-xxx-xxxx" />
+			<br>
+			<div id="errorPhone" class="errorDiv">
+				Please enter a valid Phone Number.
+			</div>
+			<br>
+			
+            <label for="zipcode">ZipCode*:</label>
+			<input type="text" name="zipcode" id="zipcode" placeholder="xxxxxx" />
+			<br>
+			<div id="errorZipCode" class="errorDiv">
+				Please enter a valid zip code.
+			</div>
+			<br>
+             
+            <label for="zipcode">How did you hear*:</label>
+			<input type='checkbox'  class="howHear"  name="source" value="facebook" /> Facebook
+            <input type='checkbox'  class="howHear" name="source" value="google" /> Google
+            <input type='checkbox' class="howHear"  name="source" value="yelp" /> Yelp 
+			<br>
+			<div id="errorSource" class="errorDiv">
+				Please select atleast one option.
+			</div>
+			<br> 
+             
+			<label for="comments">Comments*:</label>
+			<textarea name="text" id="comments" placeholder="Your comments" rows="5" cols="25" required></textarea>
+			<br><br>
+			<input type="Submit" class="submit" onclick="finalcheck()">
+			<input type="Reset">
+			<br><br>
+		 </form>
+	 </main>
+ </div>
+
+ <script>
+ 
+ </script>
+
+ </body>
+</html>
