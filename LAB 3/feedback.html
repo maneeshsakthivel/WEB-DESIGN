@@ -1,0 +1,129 @@
+<html>
+    <head>
+        <style>
+            label{
+                float: left;
+                width: 150px;
+            }
+            #container{
+                width: 700px;
+                margin: auto;
+                background-color: beige;
+            }
+            main{
+                padding: 50px;
+            }
+        </style>
+        <title>
+            Feedback
+        </title>
+    </head>
+    <body>
+        <div id="container">
+            <main>
+                <h2>
+                    Feedback
+                </h2>
+                <h3>
+                    All fields are mandotory
+                </h3>
+
+                <form action="">
+                    <label for=""> Title*</label>
+                    <input type="radio" value="miss" required="required">Miss
+                    <input type="radio" value="mr" required="required">Mr
+                    <input type="radio" value="mrs" required="required">Mrs
+                    <br>
+                    <br>
+
+                    <label for="">First Name*</label>
+                    <input type="text" name="firstName" id="", placeholder="firstName", required="required" onblur="validateInputs(this,1, 'errorFname')">
+                    <div id="errorFname" style="display: none; color: red;">
+                        Invalid First Name
+                    </div>
+                    <br>
+                    <br>
+                    <label for="">Last Name*</label>
+                    <input type="text" name="lastName" id="", placeholder="last name", required="required" onblur="validateInputs(this,1, 'errorLname')">
+                    <div id="errorLname" style="display: none; color: red;">
+                        Invalid last name
+                    </div>
+                    <br><br>
+                    
+                    <label for="">Email ID*</label>
+                    <input type="text" name="email" id="", placeholder="Email", required="required" onblur="validateInputs(this,2)">
+                    <div id="erroremail" style="display: none; color: red;">
+                        Invalid emailid
+                    </div>
+
+                    <br><br>
+
+
+                    <label for="">Phone Number*</label>
+                    <input type="text" name="number" id="", placeholder="xxx-xxx-xxx", required="required"  onblur="validateInputs(this,4)">
+                    <div id="errorNumber" style="display: none; color: red;">
+                        Invalid Number
+                    </div>
+
+                    <br><br>
+
+
+                    <label for="">Comments</label>
+                    <textarea name="comments" id="comments" cols="30" rows="10"></textarea>
+
+                    <br><br>
+
+
+                    <input type="submit" value="Submit">
+                    <input type="reset" value="Reset">
+
+                    
+                    
+                </form>
+            </main>
+        </div>
+       <script>
+           function validateInputs(obj, type, nametype){
+               var regexName = /^[a-zA-z]+$/
+               const regexmail = /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+               var regexphone =  "/^[\+]?[(]?[0-9]{3}[)]?[-\s\.]?[0-9]{3}[-\s\.]?[0-9]{4,6}$/im";
+
+
+               switch(type){
+                   case 1:
+                       if(!obj.value.trim().match(regexName)){
+                       obj.style.border = "2px solid red";
+                       document.getElementById(nametype).style.display = "block";
+                   }
+                   else{
+                    document.getElementById(nametype).style.display = "none";
+                   }
+                   case 2:
+                       if (!obj.value.trim().match(regexmail)){
+                        obj.style.border = "2px solid red";
+                       document.getElementById("erroremail").style.display = "block";
+                       }
+                       else{
+                        document.getElementById("erroremail").style.display = "none";
+                       }
+                    case 3:
+                    if (!obj.value.trim().match(regexName)){
+                        obj.style.border = "2px solid red";
+                       document.getElementById("erroremail").style.display = "block";
+                       }
+                       else{
+                        document.getElementById("erroremail").style.display = "none";
+                       }
+                    case 4:
+                    if (!obj.value.trim().match(regexphone)){
+                        obj.style.border = "2px solid red";
+                       document.getElementById("errorNumber").style.display = "block";
+                       }
+                       else{
+                        document.getElementById("errorNumber").style.display = "none";
+                       }
+               }
+           }
+       </script>
+    </body>
+</html>
