@@ -1,0 +1,39 @@
+[
+    {
+      "Title": "Assignment 1",
+      "Description": "HTML",
+      "Due_Date": "Jan 27th 2021 ",
+      "Time": "5 pm"
+    },
+    {
+      "Title": "Assignment 2",
+      "Description": "CSS",
+      "Due_Date": "Feb 3rd 2021",
+      "Time": "5 pm"
+    },
+    {
+      "Title": "Assignment 3",
+      "Description": "CSS & SCSS",
+      "Due_Date": "Feb 10th 2021",
+      "Time": "5 pm"
+    },
+    {
+      "Title": "Assignment 4",
+      "Description": "JS",
+      "Due_Date": "Feb 17th 2021",
+      "Time": "5 pm"
+    },
+    {
+      "Title": "Assignment 5",
+      "Description": "Node",
+      "Due_Date": "Feb 24th 2021",
+      "Time": "5 pm"
+    },
+    {
+      "Title": "Assignment 6",
+      "Description": "ToDo App",
+      "Due_Date": "March 3rd 2021",
+      "Time": "5 pm"
+    }
+]
+  
